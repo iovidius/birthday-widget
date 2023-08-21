@@ -6,7 +6,7 @@ A Rainmeter widget for displaying upcoming birthdays.
 
 ## Installation
 1. Install [Rainmeter](https://www.rainmeter.net/);
-2. Install the .rmskin package.
+2. Install the .rmskin package (latest release).
 
 ## Customize
 1. Add a CSV file containing all birthdays you want to display to the skin folder;
