@@ -90,7 +90,13 @@ function GetAnnotations()
     prev = 0
     for _, entry in ipairs(todayEntries) do
         if entry.day ~= currentDay and entry.day ~= prev then
-            diff = diff + 1
+			-- TODO: Dec -> Jan
+			local x = {year = currentYear, month = entry.month, day = entry.day}
+			local y = {year = currentYear, month = currentMonth, day = currentDay}
+			local time1 = os.time(x)
+			local time2 = os.time(y)
+			local difference_in_seconds = os.difftime(time1, time2)
+			diff = difference_in_seconds / (60 * 60 * 24)
             annotations = annotations .. '+' .. diff
         end
         prev = entry.day
