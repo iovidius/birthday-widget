@@ -97,7 +97,7 @@ function GetAnnotations()
 			local time2 = os.time(y)
 			local difference_in_seconds = os.difftime(time1, time2)
 			diff = difference_in_seconds / (60 * 60 * 24)
-            annotations = annotations .. '+' .. diff
+            annotations = annotations .. '+' .. math.floor(diff)
         end
         prev = entry.day
         annotations = annotations .. '\n'
